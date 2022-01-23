@@ -1,0 +1,497 @@
+/*
+File-name:
+    style.css
+
+Author:
+    Justin San
+
+purpose:
+    Style for web app assignment p1
+
+Date Created:
+    17/03/2020
+
+Last edited:
+    06/04/2020
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Baloo+2|Libre+Franklin&display=swap');
+/*KEYFRAMES FOR ANIMATION*/
+@keyframes bannerFade{
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+}
+/*START HEADER SECTION STYLING*/ /*USED FOR ALL*/
+header {
+    text-align: center;
+    background-color: #3F7D20;
+
+    user-select: none;
+    top:0px;
+    left: 0px;
+    padding:10px 7%;
+    position: fixed;
+    z-index: 1;
+    width: 96%;
+}
+
+header a {
+    text-decoration: none;
+    font: 3em 'Baloo 2', cursive;
+    color: #F3EFF5;
+
+    margin: 20px;
+    padding: 0px 5px;
+}
+
+header a:hover{
+    background-color: #72b01d;
+    border-radius: 5px;
+    font-weight: bold;
+
+    color: #454955;
+}
+
+.first{
+    width: 100%;
+}
+
+.second{
+    width: 100%;
+}
+
+body{
+    background-color: #454955;
+    font-family: 'Libre Franklin', sans-serif;
+    overflow-x: hidden;
+    color: #F3EFF5;
+
+}
+
+footer{
+    clear: both;
+    background-color: #3F7D20;
+    text-align: center;
+    margin: 0 -1%;
+    padding: 5px;
+}
+
+footer p{
+    font-size: 0.75em;
+    margin: 0px;
+    color: #ffffff;
+    padding-top: 4px;
+}
+
+
+
+.currentPage{
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.banner{
+    position: relative;
+    margin: 0 -1%;
+    padding-top: 81px;
+}
+
+    /*ANIMATION START*/
+.banner img.first{
+    position: absolute;
+    animation: bannerFade ease-in-out infinite 6s alternate;
+}
+    /*ANIMATION END*/
+.logo{
+    padding: 5px;
+    height: 64px;
+    width: 64px;
+
+    position: fixed;
+    z-index: 1;
+    }
+/*END HEADER SECTION STYLING*/
+/*START CONTENT SECTION STYLING*/ 
+h1 {
+    font-size: 2.25em;
+  }
+.bookTitle{
+    font-size: 2.25em;
+    line-height: 14px;
+  }
+  
+p{
+    font-size: 0.75em;
+  }
+
+em{
+    font-size: 0.82em;
+  }
+
+.content{
+    padding: 5px 5px 20px 5px;
+    width: 98%;
+    background-color: #454955;
+    color: #F3EFF5;
+}
+  /*used in index.html*/
+.content .bookCover{
+    width: 150px; 
+    height: 250px;
+}
+    
+.row{
+    display: flex;
+}
+
+.eachItem{
+    position: relative;
+    width: 255px;
+    margin: 0px 10px 45px 15px;
+    border-right: 2px #ffffff;
+    flex: 25%;
+}
+
+.readMore{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 94%;
+    opacity: 0;
+    transition: 1s ease;
+    background-color: #0D0A0B;
+  
+    text-align: left;
+    overflow-y: scroll;
+  
+    border-top-left-radius: 5px;
+}
+
+.eachItem:hover .readMore{
+  opacity: 1;
+}
+
+.eachItem:hover .description{
+  opacity: 0;
+}
+
+.eachItem:hover img{
+  opacity: 0;
+}
+
+/*used in product.html*/
+
+#columnLeft{
+    float: left;
+    width: 70%;
+    padding: 10px 10px 40px 10px;
+    margin: 0px 4.45%;
+}
+
+#columnRight{
+    float: left;
+    width: 16%;
+    padding: 10px 10px 40px 10px;
+    margin-top: 165px;
+    padding: 5px;
+}
+
+.bookInCart{
+    width: 55%;
+}
+
+td strong{
+    font-size: initial;
+}
+
+.row .item{
+    padding: 15px;
+}
+
+/*
+will be used with js function
+
+.content #bookProduct(x){
+    position: absolute;
+    opacity: 1;
+}
+
+.special{
+    margin-top: 21%;
+}
+*/
+
+.content .bookProduct{
+    clear: both;
+    padding: 5px 10px;
+    margin: 5px 10px;
+}
+
+.content .bookProduct{
+    clear: both;
+    padding: 5px 10px;
+    margin: 5px 10px;
+}
+
+.content h2{
+    font-size: 1.5em;
+}
+
+.content .statistic{
+    float: left;
+    width: 50%;
+}
+
+.statistic th{
+    background-color: #3F7D20;
+}
+
+.statistic td{
+    background-color: blue;
+    color: #fff;
+}
+
+.content .bestSelling{
+    float: left;
+    width: 31%;
+    padding: 10px 10px 40px 10px;
+    margin-left: 50px;
+    margin-top: -32px;
+}
+
+.content .product{
+    width: 10%;
+    border-left: 5px solid #73ff00;
+    padding-left: 3px;
+    float: left;
+    margin-bottom: 5px;
+}
+
+.content .author{
+    margin-top: -20px;
+}
+
+.content .blurb{
+    padding: 0px 15px;
+    margin: 0px 10%;
+    display: flex;
+}
+
+.content ul, li{
+    margin-left: 90px;
+    font-size: 0.89em;
+}
+
+.latestArrival li{
+    margin-left: -14px;
+    font-size: 1em;
+}
+
+.content ul{
+    margin-top: -1px;
+}
+
+/*
+Will be used in assigmemnt pt2 with js
+*/
+
+.content .navMenu{
+    position: absolute;
+    display: flex;
+    letter-spacing: 2px;
+    margin-left: 56%;
+    font-size: 1.25em;
+    user-select: none;
+}
+.content .navMenu .next:hover{
+    color: #0D0A0B;
+    cursor: pointer;
+    user-select: none;
+}
+
+.content .navMenu .previous:hover{
+    color: #0D0A0B;
+    cursor: pointer;
+    user-select: none;
+}
+
+.navMenu .next:active {
+    cursor: pointer;
+    user-select: none;
+}
+
+.navMenu .previous:active{
+    cursor: pointer;
+    user-select: none;
+}
+
+aside{
+    /*
+    width: 25%;
+    float: right; 
+    */
+    border: 1px solid #000000;
+    padding: 2px;
+}
+
+    /*used in enquire.html*/
+form{
+    padding: 0 20%;
+}
+form label{
+    font-weight: bold;
+}
+
+legend{
+    background-color: #454955;
+    font-weight: bold;
+    border: 1px solid #F3EFF5;
+    margin-left: 29%;
+    padding: 6px;
+    letter-spacing: 2px;
+}
+fieldset{
+    background-color: #0E0F1E;
+    letter-spacing: 1px;
+
+}
+input{
+    color: #F3EFF5;
+    background-color: #454955;
+    border: none;
+    border-bottom: 1px solid #F3EFF5;
+    margin: 0px 3px 3px 2px;
+}
+input:disabled{
+    background-color: #0E0F1E;
+    border: none;
+    border-bottom: 1px solid #F3EFF5;
+}
+input::placeholder{
+    background-color: #454955;
+    border: none;
+    border-bottom: 1px solid #F3EFF5;
+    color: #8e8a91;
+}
+textarea{
+    color: #F3EFF5;
+    background-color: #454955;
+}
+textarea::placeholder{
+    color: #8e8a91;
+}
+select{
+    color: #F3EFF5;
+    background-color: #454955;
+}
+.alignElement{
+    margin: 0px 32%;
+    text-align: left;
+}
+.buttons{
+    margin-top: 14px;
+    border: 2px solid #8a8e9b;
+    padding: 10px 42%;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: #0E0F1E;
+}
+.button{
+    border-radius: 7px;
+}
+.button:hover{
+    font-weight: bold;
+}
+
+/*used in payment.html*/
+.warning{ 
+    font-size: 0.7em;
+}
+.userOrder{
+    border: 0px;
+    text-align: left;
+}
+span{
+    font-style: italic;
+}
+
+#userSelectedProductsQTY{
+    padding:0px 7px 0px 7px;
+}
+
+.cardTypeImg{
+    width: 30px;
+    padding: 7px 12px 0px 0px;
+}
+
+    /*used in about.html*/
+.column{
+    float: left;
+    width: 30%;
+    padding: 10px 10px 40px 10px;
+    margin: 0px 8.45%;
+}
+
+.aboutMe .photo{
+    position: relative;
+    display: inline-block;
+    width: 60%;
+    border-radius: 7px;
+    border: 5px black double;
+    /* 
+    border: 20px black double;
+    float: right;
+    */
+}
+
+.aboutMe dl{
+    position: absolute;
+    opacity: 0;
+    transition: 1s ease;
+    margin-top: -18%;
+    margin-left: 10px;
+    padding: 2px;
+    text-align: left;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.aboutMe:hover dl{
+  opacity: 1;
+}
+
+.aboutMe:hover .photo{
+    opacity: 1;
+    filter: blur(10px);
+    transition: 2s ease;
+    border-radius: 7px;
+    border: 5px black double;
+}
+
+.aboutMe p{
+    opacity: 0;
+    position: absolute;
+    z-index: 3;
+    padding: 5px 10px 0px 0px;
+    text-align: center;
+    margin: 11% 4%;
+}
+
+
+table,td,tr{
+    border: 1px solid black;
+}
+
+.photo{
+    height: 15%;
+    width: 15%;
+}
+
+.orderTable{
+    font-size: 0.75em;
+}
